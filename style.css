@@ -1,27 +1,39 @@
 body{
     background-color: honeydew;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    margin: 5px;
+    margin: 6px;
     padding: 3px;
+}
+
+h1 {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .about{
     border-radius: 16px;
     background-color: aquamarine;
     padding-left: 5px;
+    padding-bottom: 1px;
 }
 
 .projects{
-    padding-left: 33px;
-    padding-right: 33px;
+    padding-left: 34px;
+    padding-right: 34px;
+    padding-bottom: 47px;
     border-radius: 16px;
     background-color: rgb(127, 255, 185);
+}
+
+.contact{
+    border-radius: 16px;
+    background-color: aquamarine;
+    padding-left: 5px;
 }
 
 .projectsection {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(min(100%, 520px), 1fr));
-    gap: 16px;
+    gap: 20px;
 }
 
 .project{

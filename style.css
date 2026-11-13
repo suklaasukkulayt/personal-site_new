@@ -7,6 +7,7 @@ body{
 
 h1 {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: center;
 }
 
 .about{
@@ -24,7 +25,7 @@ h1 {
     background-color: rgb(127, 255, 185);
 }
 
-.contact{
+.contacts{
     border-radius: 16px;
     background-color: aquamarine;
     padding-left: 5px;
@@ -78,4 +79,135 @@ h1 {
 .projectLink{
     padding-left: 16px;
     margin-top: 0px;
+}
+
+.contact{
+    background-color: rgba(34, 211, 137, 0.616);
+    backdrop-filter: blur(5px);
+    width: fit-content;
+    border-radius: 16px;
+    padding: 0 10px 10px 10px;
+    margin-bottom: 15px;
+    transition: ease-in-out 0.35s;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    align-content: center;
+}
+
+.contactsection{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 5px));
+    gap: 5px;
+}
+
+.contactImg {
+    width: 50px;
+    height: 50px;
+}
+
+#discordbutton {
+    background-image: url(./images/discord.png);
+}
+
+#slackbutton {
+    background-image: url(./images/slack.png);
+}
+
+#githubbutton {
+    background-image: url(./images/github.png);
+}
+
+
+.contactBtn {
+    width: 50px;
+    height: 50px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    border-radius: 16px;
+    border: none;
+    background-color: rgba(255, 255, 255, 0);
+    cursor: pointer;
+    transition: ease-in-out 0.35s;
+    flex: 0 0 auto;
+}
+
+.copybutton {
+    width: 15px;
+    height: 15px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    border: none;
+    background-color: rgba(255, 255, 255, 0);
+    cursor: pointer;
+    transition: ease-in-out 0.35s;
+    flex: 0 0 auto;
+    background-image: url(./images/copy.png);
+}
+
+#closeBtn {
+    width: 50px;
+    height: 50px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    align-self: center;
+    border: none;
+    background-color: rgba(255, 255, 255, 0);
+    cursor: pointer;
+    transition: ease-in-out 0.35s;
+    flex: 0 0 auto;
+    background-image: url(./images/close.png);
+}
+
+.contactBtn:hover {
+    transform: scale(1.1);
+    transition: ease-in-out 0.35s;
+}
+
+#closeBtn:hover {
+    transform: scale(1.1);
+    transition: ease-in-out 0.35s;
+}
+
+#closeBtn:active {
+    transform: scale(0.9);
+    transition: ease-in-out 0.35s;
+}
+
+.copybutton:hover {
+    transform: scale(1.1);
+    transition: ease-in-out 0.35s;
+}
+
+#copiedDiv.open {
+    animation: copyOpen 0.5s;
+}
+
+#copiedDiv {
+    background-color: bisque;
+    border-radius: 16px;
+    width: fit-content;
+    position: fixed;
+    display: none;
+    transform: translate(-50%, -50%);
+    top: 5%;
+    left: 50%;
+    z-index: 10;
+    margin: 5px;
+    padding: 5px;
+}
+
+@keyframes copyOpen{
+    from {
+        opacity: 0;
+    }
+
+    to{
+        opacity: 1;
+    }
 }

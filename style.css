@@ -142,6 +142,7 @@ h1 {
     background-position: center;
     background-size: cover;
     border: none;
+    border-radius: 6px;
     background-color: rgba(255, 255, 255, 0);
     cursor: pointer;
     transition: ease-in-out 0.35s;
@@ -150,18 +151,17 @@ h1 {
 }
 
 #closeBtn {
-    width: 50px;
-    height: 50px;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
+    width: 45px;
+    height: 45px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
     align-self: center;
+    border-radius: 50%;
     border: none;
     background-color: rgba(255, 255, 255, 0);
     cursor: pointer;
     transition: ease-in-out 0.35s;
-    flex: 0 0 auto;
-    background-image: url(./images/close.png);
 }
 
 .contactBtn:hover {
@@ -172,6 +172,7 @@ h1 {
 #closeBtn:hover {
     transform: scale(1.1);
     transition: ease-in-out 0.35s;
+    background-color: rgba(0, 0, 0, 0.08);
 }
 
 #closeBtn:active {
@@ -182,10 +183,15 @@ h1 {
 .copybutton:hover {
     transform: scale(1.1);
     transition: ease-in-out 0.35s;
+    background-color: rgba(0, 0, 0, 0.08);
 }
 
 #copiedDiv.open {
     animation: copyOpen 0.5s;
+}
+
+#copiedDiv.closing {
+    animation: copyClose 0.5s;
 }
 
 #copiedDiv {
@@ -200,6 +206,7 @@ h1 {
     z-index: 10;
     margin: 5px;
     padding: 5px;
+    transition: ease-in-out 0.35s;
 }
 
 @keyframes copyOpen{
@@ -207,7 +214,17 @@ h1 {
         opacity: 0;
     }
 
-    to{
+    to {
         opacity: 1;
+    }
+}
+
+@keyframes copyClose{
+    from {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0;
     }
 }
